@@ -35,7 +35,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='1'/%3E%3C/filter%3E%3Crect width='256' height='256' fill='%23F5F0E8' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='1'/%3E%3C/filter%3E%3Crect width='256' height='256' fill='%23000' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 999;
     opacity: 0.4;
@@ -169,7 +169,7 @@
 
   .prizes-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
 
@@ -196,6 +196,7 @@
     background: var(--ink);
     color: var(--cream);
     border-color: var(--ink);
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
